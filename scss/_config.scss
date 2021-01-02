@@ -1,0 +1,54 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+$show-home-image: true;
+$home-image: url(../images/background.jpg);
+$background-opacity: 0.7;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin backgroung-img {
+  @if ($show-home-image) {
+    &#bg-img {
+      background: $home-image;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($primary-color, $background-opacity);
+        z-index: -1;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "config";
+
+body {
+  @include backgroung-img;
+  width: 100vw;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: set-text-color($primary-color);
+  background: rgba($primary-color, $background-opacity);
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.md-heading {
+    font-size: 2rem;
+    padding: 0.5rem;
+    background: rgba($primary-color, 0.2);
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 4rem;
+
+  & .icons {
+    margin-top: 1rem;
+
+    & a {
+      padding-right: 0.5rem;
+      color: set-text-color($primary-color);
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &#home {
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
