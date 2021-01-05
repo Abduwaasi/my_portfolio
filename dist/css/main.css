@@ -197,6 +197,44 @@ a {
           transition-delay: 0.8s;
 }
 
+@media screen and (max-width: 760px) {
+  main {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main#home h1 {
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    font-size: 4.5rem;
+  }
+  .menu-nav {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .menu-nav .branding {
+    height: 25vh;
+  }
+  .menu-nav .branding .portrait {
+    background: url("../images/portrait_small.jpg");
+    width: 150px;
+    height: 150px;
+  }
+  .menu-nav .nav-list {
+    height: 75vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #home .lg-heading {
+    font-size: 4rem;
+  }
+  #home .md-heading {
+    font-size: 1.5rem;
+  }
+}
+
 body {
   width: 100vw;
   height: 100%;
@@ -233,15 +271,16 @@ h3 {
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h1.md-heading,
 h2.md-heading,
 h3.md-heading {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 0.5rem;
   background: rgba(39, 39, 39, 0.2);
+  margin-bottom: 2rem;
 }
 
 .text-secondary {

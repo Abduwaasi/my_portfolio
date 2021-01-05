@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "responsive";
 
 body {
   @include backgroung-img;
@@ -17,13 +18,14 @@ h2,
 h3 {
   font-weight: 400;
   &.lg-heading {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   &.md-heading {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 0.5rem;
     background: rgba($primary-color, 0.2);
+    margin-bottom: 2rem;
   }
 }
 

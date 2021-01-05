@@ -1,0 +1,50 @@
+// for extra large screen
+@include mediaXl {
+}
+
+// for laptops and desktop
+@include mediaLg {
+}
+
+// for ipad and tablet
+@include mediaMd {
+  main {
+    text-align: center;
+    align-items: center;
+
+    &#home h1 {
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      font-size: 4.5rem;
+    }
+  }
+
+  .menu-nav {
+    grid-template-columns: 1fr;
+
+    .branding {
+      height: 25vh;
+      .portrait {
+        background: url("../images/portrait_small.jpg");
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .nav-list {
+      height: 75vh;
+    }
+  }
+}
+
+// for for smartphones
+@include mediaSm {
+  #home {
+    .lg-heading {
+      font-size: 4rem;
+    }
+    .md-heading {
+      font-size: 1.5rem;
+    }
+  }
+}

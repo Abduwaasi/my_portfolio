@@ -71,12 +71,12 @@ a {
   }
 }
 @mixin mediaLg {
-  @media screen and (min-width: 761px) and @(max-width:1170) {
+  @media screen and (min-width: 761px) and (max-width: 1170) {
     @content;
   }
 }
 
-@mixin mediaSm {
+@mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;
   }
