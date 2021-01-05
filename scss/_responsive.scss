@@ -21,9 +21,17 @@
 
   .menu-nav {
     grid-template-columns: 1fr;
+    &.open {
+      transform: translate3d(0, 0, 0);
+    }
 
     .branding {
       height: 25vh;
+      transform: translate3d(-100%, 0, 0);
+      &.open {
+        transform: translate3d(0, 0, 0);
+      }
+
       .portrait {
         background: url("../images/portrait_small.jpg");
         width: 150px;
@@ -33,6 +41,10 @@
 
     .nav-list {
       height: 75vh;
+      transform: translate3d(100%, 0, 0);
+      &.open {
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
 }

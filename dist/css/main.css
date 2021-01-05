@@ -213,8 +213,18 @@ a {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .menu-nav.open {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
   .menu-nav .branding {
     height: 25vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+  .menu-nav .branding.open {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   .menu-nav .branding .portrait {
     background: url("../images/portrait_small.jpg");
@@ -223,6 +233,12 @@ a {
   }
   .menu-nav .nav-list {
     height: 75vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  .menu-nav .nav-list.open {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
