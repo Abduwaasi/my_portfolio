@@ -1,0 +1,125 @@
+.nav-bar {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 28px;
+  height: 28px;
+  z-index: 3;
+  cursor: pointer;
+  @include transition-ease;
+
+  & .nav-line {
+    width: 28px;
+    height: 3px;
+    background-color: set-text-color($primary-color);
+    margin: 0 0 5px 0;
+    @include transition-ease;
+  }
+
+  &.close {
+    transform: rotate(720deg);
+    & .nav-line {
+      //nav bar first child
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      //nav bar first child
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      //nav bar first child
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0.95;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  @include transition-ease;
+
+  &.open {
+    visibility: visible;
+  }
+}
+
+.branding {
+  width: 100%;
+  height: 100%;
+  @include display-flex;
+  background: $primary-color;
+  transform: translate3d(0, 100%, 0);
+  @include transition-ease;
+
+  &.open {
+    transform: translate3d(0, 0, 0);
+  }
+
+  & .portrait {
+    width: 250px;
+    height: 250px;
+    background: url(../images/portrait.jpg);
+    border: 2px solid $secondary-color;
+    border-radius: 50%;
+  }
+}
+.nav-list {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: darken($primary-color, 5);
+  @include display-flex;
+  @include transition-ease;
+  transform: translate3d(0, -100%, 0);
+
+  &.open {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.list-item {
+  transform: translate3d(600px, 0, 0);
+  @include transition-ease;
+
+  &.open {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &.active > a {
+    color: $secondary-color;
+  }
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  @include transition-ease;
+
+  &:hover {
+    font-size: 2.3rem;
+    color: $secondary-color;
+  }
+}
+
+@for $i from 1 through 4 {
+  .list-item:nth-child(#{$i}) {
+    transition-delay: $i * 0.2s;
+  }
+}

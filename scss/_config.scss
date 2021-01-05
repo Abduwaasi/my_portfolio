@@ -27,6 +27,13 @@ a {
   }
 }
 
+@mixin display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
 }
@@ -36,7 +43,6 @@ a {
     &#bg-img {
       background: $home-image;
       background-size: cover;
-      background-attachment: fixed;
       background-position: center;
 
       &::after {
@@ -50,5 +56,28 @@ a {
         z-index: -1;
       }
     }
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 760px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 761px) and @(max-width:1170) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
