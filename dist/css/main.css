@@ -262,10 +262,10 @@ h3.lg-heading {
 h1.md-heading,
 h2.md-heading,
 h3.md-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 0.5rem;
   background: rgba(39, 39, 39, 0.2);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .text-secondary {
@@ -376,6 +376,42 @@ main#home h1 {
 .project-gallery img:hover {
   opacity: 0.5;
   border-color: #ff652f;
+}
+
+.contact-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 2rem;
+}
+
+.contact-boxes .box {
+  font-size: 1.5rem;
+  border: 3px solid #fff;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-boxes .box:hover {
+  background: #ff652f;
+  color: #000;
+}
+
+.contact-boxes .box:hover span {
+  color: #000;
 }
 
 footer {
