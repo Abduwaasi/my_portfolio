@@ -1,9 +1,15 @@
 // for extra large screen
 @include mediaXl {
+  .project-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // for laptops and desktop
 @include mediaLg {
+  .project-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // for ipad and tablet
@@ -47,6 +53,20 @@
       }
     }
   }
+
+  .about-info {
+    grid-template-areas:
+      "aboutImg"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // for for smartphones
@@ -58,5 +78,9 @@
     .md-heading {
       font-size: 1.5rem;
     }
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
   }
 }
