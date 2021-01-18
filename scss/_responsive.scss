@@ -71,11 +71,18 @@
 
 // for for smartphones
 @include mediaSm {
-  #home {
-    .lg-heading {
-      font-size: 4rem;
+  main {
+    width: 98vw;
+    padding: 3rem auto;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      font-size: 3rem;
     }
-    .md-heading {
+    &.md-heading {
       font-size: 1.5rem;
     }
   }

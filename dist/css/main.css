@@ -16,7 +16,7 @@ a {
 
 .nav-bar {
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   right: 2rem;
   width: 28px;
   height: 28px;
@@ -229,6 +229,8 @@ body {
   color: #fff;
   background: #272727;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  padding-top: 0;
 }
 
 body#bg-img {
@@ -285,9 +287,9 @@ header {
 }
 
 main {
-  width: 100%;
+  width: 95vw;
   min-height: calc(100vh - 60px);
-  padding: 4rem;
+  padding: 4rem auto 2rem auto;
 }
 
 main .icons {
@@ -307,6 +309,7 @@ main .icons a:hover {
 
 main#home {
   height: 100vh;
+  overflow: hidden;
 }
 
 main#home h1 {
@@ -394,6 +397,7 @@ main#home h1 {
 }
 
 .project-gallery {
+  margin-top: 2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -420,20 +424,18 @@ main#home h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
 .contact-boxes .box {
   font-size: 1.5rem;
   border: 3px solid #fff;
-  padding: 1rem 2rem;
+  padding: 1rem auto;
   margin-bottom: 2rem;
   color: #fff;
   -webkit-transition: all 0.5s ease-in-out;
@@ -525,10 +527,19 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  #home .lg-heading {
-    font-size: 4rem;
+  main {
+    width: 98vw;
+    padding: 3rem auto;
+    overflow-x: hidden;
   }
-  #home .md-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3rem;
+  }
+  h1.md-heading,
+  h2.md-heading,
+  h3.md-heading {
     font-size: 1.5rem;
   }
   .project-gallery {
