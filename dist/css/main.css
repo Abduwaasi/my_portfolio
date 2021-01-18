@@ -291,7 +291,7 @@ header {
 main {
   width: 95vw;
   min-height: calc(100% - 60px);
-  padding: 4rem auto 2rem auto;
+  padding: 2rem;
   margin-top: 3rem;
 }
 
@@ -315,7 +315,7 @@ main#home {
   overflow: hidden;
 }
 
-main#home h1 {
+main#home pa h1 {
   padding-top: 20vh;
 }
 
