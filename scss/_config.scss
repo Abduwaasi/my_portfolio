@@ -44,6 +44,8 @@ a {
       background: $home-image;
       background-size: cover;
       background-position: center;
+      height: 100vh;
+      overflow: hidden;
 
       &::after {
         content: "";

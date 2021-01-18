@@ -33,7 +33,7 @@ h3 {
 
 .medium-text {
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .text-secondary {
@@ -48,8 +48,9 @@ header {
 
 main {
   width: 95vw;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100% - 60px);
   padding: 4rem auto 2rem auto;
+  margin-top: 3rem;
 
   & .icons {
     margin-top: 1rem;

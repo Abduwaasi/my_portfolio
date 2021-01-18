@@ -15,7 +15,7 @@ a {
 }
 
 .nav-bar {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   right: 2rem;
   width: 28px;
@@ -237,6 +237,8 @@ body#bg-img {
   background: url(../images/background.jpg);
   background-size: cover;
   background-position: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body#bg-img::after {
@@ -273,7 +275,7 @@ h3.md-heading {
 
 .medium-text {
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .text-secondary {
@@ -288,8 +290,9 @@ header {
 
 main {
   width: 95vw;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100% - 60px);
   padding: 4rem auto 2rem auto;
+  margin-top: 3rem;
 }
 
 main .icons {
@@ -473,6 +476,19 @@ footer {
 }
 
 @media screen and (max-width: 760px) {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3.5rem;
+  }
+  h1.md-heading,
+  h2.md-heading,
+  h3.md-heading {
+    font-size: 2rem;
+  }
+  .nav-link {
+    font-size: 1.6rem;
+  }
   main {
     text-align: center;
     -webkit-box-align: center;
@@ -482,7 +498,6 @@ footer {
   main#home h1 {
     line-height: 1;
     margin-bottom: 1.5rem;
-    font-size: 4.5rem;
   }
   .menu-nav {
     -ms-grid-columns: 1fr;
@@ -535,12 +550,18 @@ footer {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   h1.md-heading,
   h2.md-heading,
   h3.md-heading {
     font-size: 1.5rem;
+  }
+  .medium-text {
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    font-size: 1.2rem;
   }
   .project-gallery {
     -ms-grid-columns: 1fr;
