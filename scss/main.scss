@@ -29,6 +29,11 @@ h3 {
   }
 }
 
+.medium-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
 .text-secondary {
   color: $secondary-color;
 }
@@ -77,16 +82,45 @@ main {
     "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
+  li {
+    list-style-type: none;
+    line-height: 1.4;
+    text-align: left;
+    &::before {
+      content: "\2022";
+      color: $secondary-color;
+      font-size: 1.5rem;
+      margin-left: -1rem;
+      display: inline-block;
+      padding-right: 0.5rem;
+    }
+  }
+
   .about-img {
     grid-area: aboutImg;
     border: 3px solid $secondary-color;
     border-radius: 50%;
     margin: 0 auto;
+    width: 200px;
+    height: 200px;
+
+    &.img {
+      width: 100%;
+    }
   }
 
   .about-bio {
     grid-area: bio;
+
+    & .bio {
+      font-size: 2rem;
+      font-weight: 500;
+      text-shadow: 2px 2px 5px $primary-color;
+      margin-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
   }
+
   .job-1 {
     grid-area: job1;
   }
